@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import BrowseBooks from "./pages/BrowseBooks";
 import BookDetails from "./pages/BookDetails";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Route path="/books" element={<><NavBar /><BrowseBooks /></>} />
         <Route path="/books/:category" element={<><NavBar /><BrowseBooks /></>} />
         <Route path="/book/:id" element={<><NavBar /><BookDetails /></>} />
+        <Route path="*" element={<NotFound />} />
       
     </div>
   )
