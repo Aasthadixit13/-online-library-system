@@ -1,19 +1,28 @@
-import { Routes, Route, Link } from "react-router-dom";
+
+
+
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
+import BrowseBooks from "./pages/BrowseBooks";
+import BookDetails from "./pages/BookDetails";
+import AddBook from "./pages/AddBook";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
-    <div>
-      <h1> online library system</h1>
-
-      <nav style={{ display: "flex", gap: "15px" }}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-
+    <>
       <Routes>
-        <Route path="/" element={<h2>Home Page</h2>} />
-        <Route path="/about" element={<h2>About Page</h2>} />
+        {/* Routes WITH NavBar */}
+        <Route path="/" element={<><NavBar /><Home /></>} />
+        <Route path="/books" element={<><NavBar /><BrowseBooks /></>} />
+        <Route path="/books/:category" element={<><NavBar /><BrowseBooks /></>} />
+        <Route path="/book/:id" element={<><NavBar /><BookDetails /></>} />
+        <Route path="/add" element={<><NavBar /><AddBook /></>} />
+
+        {/* Route WITHOUT NAVBAR */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
-    </div>
+    </>
   );
 }

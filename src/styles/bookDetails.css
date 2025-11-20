@@ -1,0 +1,110 @@
+
+
+/* Container for centering the card */
+.book-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  padding: 50px 20px;
+  /* background: linear-gradient(135deg, #c8e6c9, #e0f7fa); */
+  /* soft library gradient */
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card for book details */
+.book-details-card {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Book icon on top */
+.book-details-card::before {
+  content: "📚";
+  font-size: 3rem;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for card */
+.book-details-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Book title */
+.book-details-card h1 {
+  font-size: 2.2rem;
+  margin: 30px 0 15px;
+  color: #1a237e;
+  /* deep blue */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Book info paragraphs */
+.book-details-card p {
+  margin: 12px 0;
+  font-size: 1.1rem;
+  color: #424242;
+  line-height: 1.6;
+}
+
+/* Labels bold with color */
+.book-details-card b {
+  color: #1a237e;
+}
+
+/* Rating stars */
+.rating {
+  font-size: 1.2rem;
+  color: #ffb300;
+  /* golden stars */
+}
+
+/* Back button */
+.back-btn {
+  margin-top: 30px;
+  padding: 12px 28px;
+  background-color: #1a237e;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #283593;
+  transform: scale(1.05);
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .book-details-card {
+    padding: 35px 20px;
+  }
+
+  .book-details-card h1 {
+    font-size: 1.7rem;
+  }
+
+  .back-btn {
+    width: 100%;
+  }
+}
