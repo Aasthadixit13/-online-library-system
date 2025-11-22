@@ -110,24 +110,7 @@ body {
   font-size: 15px;
 }
 
-/* 🔹 Responsive Navbar */
-/* @media (max-width: 768px) {
-  .navbar {
-    padding: 14px 20px;
-  }
 
-  .navbar h2 {
-    font-size: 18px;
-  }
-
-  .navbar ul {
-    gap: 15px;
-  }
-
-  .navbar a {
-    font-size: 13px;
-  }
-} */
  /* 🔹 Tablet View (Max 768px) */
  @media (max-width: 768px) {
    .navbar {
