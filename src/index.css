@@ -111,7 +111,7 @@ body {
 }
 
 /* 🔹 Responsive Navbar */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .navbar {
     padding: 14px 20px;
   }
@@ -127,7 +127,51 @@ body {
   .navbar a {
     font-size: 13px;
   }
-}
+} */
+ /* 🔹 Tablet View (Max 768px) */
+ @media (max-width: 768px) {
+   .navbar {
+     padding: 14px 20px;
+   }
+
+   .navbar h2 {
+     font-size: 18px;
+   }
+
+   .navbar ul {
+     gap: 15px;
+   }
+
+   .navbar a {
+     font-size: 13px;
+   }
+ }
+
+ /* 📱 Mobile View (Max 480px) */
+ @media (max-width: 480px) {
+   .navbar {
+     flex-direction: column;
+     padding: 10px 15px;
+     text-align: center;
+   }
+
+   .navbar ul {
+     flex-direction: column;
+     gap: 10px;
+     width: 100%;
+   }
+
+   .navbar a {
+     font-size: 12px;
+     padding: 5px;
+     display: block;
+   }
+
+   .navbar h2 {
+     font-size: 16px;
+     margin-bottom: 10px;
+   }
+ }
 
 /* 🔹 Card Grid for Tablets */
 @media (max-width: 992px) {
